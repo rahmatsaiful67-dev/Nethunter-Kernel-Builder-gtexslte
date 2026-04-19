@@ -10,12 +10,12 @@ on:
 jobs:
   Set-repos:
     name: "🐂 Parse repos.json"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     outputs:
       repos: ${{ steps.generate-matrix.outputs.repos }}
     steps:
       - name: "😄 Checkout"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: "😆 Generate Matrix"
         id: generate-matrix
@@ -26,7 +26,22 @@ jobs:
 
   Build-Kernel:
     name: "🐎 Build kernel"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    
+  build-kernel:
+    runs-on: ubuntu-20.04   # <-- UBAH DI SINI
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Python 2   # <-- TAMBAHKAN BAGIAN INI
+        run: |
+          sudo apt update
+          sudo apt install -y python2
+          sudo ln -sf /usr/bin/python2 /usr/bin/python
+
+      # ... langkah-langkah selanjutnya ...
+    
     needs:
       - Set-repos
     strategy:
