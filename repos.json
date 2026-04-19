@@ -2,7 +2,7 @@
   {
     "kernelSource": {
       "name": "NetHunter_gtexslte",
-      "repo": "https://github.com/Vagr9K/kernel_samsung_gtexslte",
+      "repo": "https://github.com/jedld/kernel_samsung_gtexslte",
       "branch": "master",
       "device": "gtexslte",
       "defconfig": "gtexslte_defconfig"
