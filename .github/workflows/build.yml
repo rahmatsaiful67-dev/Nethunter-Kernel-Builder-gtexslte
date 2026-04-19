@@ -27,10 +27,6 @@ jobs:
   Build-Kernel:
     name: "🐎 Build kernel"
     runs-on: ubuntu-20.04
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
       - name: Install Python 2   # <-- TAMBAHKAN BAGIAN INI
         run: |
