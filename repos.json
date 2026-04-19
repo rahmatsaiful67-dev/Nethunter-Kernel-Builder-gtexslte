@@ -1,31 +1,24 @@
-[  {
+[
+  {
     "kernelSource": {
-      "name": "linux-kernel",
-      "repo": "https://github.com/yanhuo26/android_kernel_xiaomi_sdm845.git",
-      "branch": "udc",
-      "device": "sdm845"
+      "name": "NetHunter_gtexslte",
+      "repo": "https://github.com/Vagr9K/kernel_samsung_gtexslte",
+      "branch": "master",
+      "device": "gtexslte",
+      "defconfig": "gtexslte_defconfig"
     },
     "withKernelSU": false,
     "toolchains": [
       {
-        "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-        "branch": "master",
-        "name": "gas"
-      },
-      {
-        "repo": "https://github.com/kdrag0n/proton-clang.git",
-        "branch": "master",
-        "name": "clang"
+        "repo": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9",
+        "branch": "cm-14.1",
+        "name": "gcc"
       }
     ],
     "params": {
-      "ARCH": "arm64",
-      "CROSS_COMPILE": "aarch64-linux-gnu-",
-      "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
-      "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
-      "CLANG_TRIPLE": "aarch64-linux-gnu-",
-      "AR": "",
-      "CC": "clang"
+      "ARCH": "arm",
+      "CROSS_COMPILE": "arm-linux-androideabi-",
+      "CROSS_COMPILE_ARM32": "arm-linux-androideabi-"
     },
     "extraParams": {
       "KEEP": ""
